@@ -1,0 +1,1 @@
+ALTER TABLE `bookings` ADD `is_deleted` boolean DEFAULT false NOT NULL;

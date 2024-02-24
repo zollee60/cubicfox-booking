@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1708390379467,
+      "tag": "0000_premium_callisto",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1708556426558,
+      "tag": "0001_thin_squirrel_girl",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1708720367300,
+      "tag": "0002_bitter_blue_shield",
+      "breakpoints": true
+    }
+  ]
+}
