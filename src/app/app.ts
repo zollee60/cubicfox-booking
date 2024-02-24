@@ -5,12 +5,30 @@ import { env } from '../config/env';
 import { createDbConnection } from '../db/db';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
+import swaggerJSDoc from 'swagger-jsdoc';
+import swaggerUI from 'swagger-ui-express';
 
 const createBookingApplication = async (): Promise<{
   app: Express;
   connection: Connection;
 }> => {
   const { db, connection } = await createDbConnection();
+
+  const swaggerDefinition = {
+    openapi: '3.0.0',
+    info: {
+      title: 'Cubicfox Booking API',
+      version: '1.0.0',
+      description: 'API for booking rooms',
+    },
+  };
+
+  const options = {
+    swaggerDefinition,
+    apis: ['./src/api/endpoints/*.ts'],
+  };
+
+  const swaggerSpec = swaggerJSDoc(options);
 
   const app = express();
 
@@ -23,6 +41,7 @@ const createBookingApplication = async (): Promise<{
 
   app.use('/public', createPublicRoutes({ db, router: publicRouter }));
   app.use('/', createPrivateRoutes({ db, router: privateRouter }));
+  app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
   return { app, connection };
 };
