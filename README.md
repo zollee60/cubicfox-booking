@@ -36,6 +36,7 @@ This project is an NX based standalone applicaiton repository.
 
 ## Potential improvement points:
 
+- Move type definitions of Endpoint implementations into separate files
 - Date related logic in
 
 ```typescript
