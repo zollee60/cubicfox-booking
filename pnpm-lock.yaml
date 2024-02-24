@@ -75,6 +75,9 @@ devDependencies:
   '@types/node':
     specifier: ~18.7.1
     version: 18.7.1
+  '@types/swagger-jsdoc':
+    specifier: ^6.0.4
+    version: 6.0.4
   '@types/uuid':
     specifier: ^9.0.8
     version: 9.0.8
@@ -3287,6 +3290,10 @@ packages:
 
   /@types/stack-utils@2.0.3:
     resolution: {integrity: sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==}
+    dev: true
+
+  /@types/swagger-jsdoc@6.0.4:
+    resolution: {integrity: sha512-W+Xw5epcOZrF/AooUM/PccNMSAFOKWZA5dasNyMujTwsBkU74njSJBpvCCJhHAJ95XRMzQrrW844Btu0uoetwQ==}
     dev: true
 
   /@types/uuid@9.0.8:
