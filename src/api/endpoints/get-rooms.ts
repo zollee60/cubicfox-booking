@@ -44,6 +44,52 @@ export const getRoomsOutputSchema = z.union([
 
 export type GetRoomsOutput = z.infer<typeof getRoomsOutputSchema>;
 
+/**
+ * @swagger
+ *
+ * /rooms:
+ *   get:
+ *     summary: Get a list of rooms
+ *     responses:
+ *       '200':
+ *         description: A list of rooms
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Room'
+ *       '400':
+ *         description: Bad Request
+ *       '401':
+ *         description: Unauthorized
+ * components:
+ *  schemas:
+ *   Room:
+ *     type: object
+ *     properties:
+ *       id:
+ *         type: string
+ *       hotelId:
+ *         type: string
+ *       roomNumber:
+ *         type: number
+ *       price:
+ *         type: number
+ *       overallCost:
+ *         type: number
+ *       hotel:
+ *         type: object
+ *         properties:
+ *           id:
+ *             type: string
+ *           name:
+ *             type: string
+ *           city:
+ *             type: string
+ *           address:
+ *             type: string
+ */
 export const createGetRooms = ({
   roomService,
 }: GetRoomsDependencies): Endpoint<GetRoomsInput, GetRoomsOutput> => ({

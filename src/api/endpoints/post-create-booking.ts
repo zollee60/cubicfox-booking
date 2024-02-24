@@ -40,47 +40,47 @@ export type PostCreateBookingOutput = z.infer<
 >;
 
 /**
- * 
+ *
  * @swagger
  * /users/{id}/bookings:
-    post:
-      summary: Create a new booking
-      parameters:
-        - in: path
-          name: id
-          required: true
-          description: ID of the User
-          schema:
-            type: string
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                roomId:
-                  type: string
-                checkIn:
-                  type: string
-                  format: date
-                checkOut:
-                  type: string
-                  format: date
-      responses:
-        '200':
-          description: Booking created successfully
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  bookingId:
-                    type: string
-        '400':
-          description: Bad Request
-        '401':
-          description: Unauthorized
+ *   post:
+ *     summary: Create a new booking
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         description: ID of the User
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               roomId:
+ *                 type: string
+ *               checkIn:
+ *                 type: string
+ *                 format: date
+ *               checkOut:
+ *                 type: string
+ *                 format: date
+ *     responses:
+ *       '200':
+ *         description: Booking created successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 bookingId:
+ *                   type: string
+ *       '400':
+ *         description: Bad Request
+ *       '401':
+ *         description: Unauthorized
  */
 
 export const createPostCreateBooking = ({

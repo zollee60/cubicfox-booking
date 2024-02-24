@@ -32,33 +32,33 @@ export type PostUserLoginOutput = z.infer<typeof postUserLoginOutputSchema>;
 
 /**
  * @swagger
- * 
+ *
  * /public/user/login:
-    post:
-      summary: Log in a user
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                username:
-                  type: string
-                password:
-                  type: string
-      responses:
-        '200':
-          description: Login successful
-          headers:
-            Set-Cookie:
-              schema:
-                type: string
-                example: 'sessionid=38afes7a8; HttpOnly; Path=/'
-        '401':
-          description: Unauthorized
-        '400':
-          description: Bad Request
+ *   post:
+ *     summary: Log in a user
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               username:
+ *                 type: string
+ *               password:
+ *                 type: string
+ *     responses:
+ *       '200':
+ *         description: Login successful
+ *         headers:
+ *           Set-Cookie:
+ *             schema:
+ *               type: string
+ *               example: 'sessionid=38afes7a8; HttpOnly; Path=/'
+ *       '401':
+ *         description: Unauthorized
+ *       '400':
+ *         description: Bad Request
  */
 
 export const createPostUserLogin = ({
