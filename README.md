@@ -28,7 +28,7 @@ This project is an NX based standalone applicaiton repository.
 
 ## Used frameworks
 
-- Express: I've decided to use Express for this project so I can show my own organization / project structure skills/ideas. In a production environment it can be wiser to use something like Nest.js since we can make progress much faster with a "Convention over Configuration" based approach. Creating these abstraction layers from scratch are timeconsuming.
+- Express: I've decided to use Express for this project so I can show my own organization / project structure skills/ideas. In a production environment it can be wiser to use something like Nest.js since we can make progress much faster with a "Convention over Configuration" based approach. Creating these abstraction layers from scratch is timeconsuming.
 
 - Drizzle: It is a newer ORM on the block, therefore not that mature like Sequelize or Type-ORM. I've decided to use Drizzle, because I really like it's SQL-like, typesafe API. Another reason I have against Sequelize is that it's static Models are making testing a bit hard. Unfortunately Drizzle's schema API is not uniform, so, it requires addtional effort to make it accessible for unit tests for example.
 
@@ -47,4 +47,4 @@ is hard to read, cognitive complexity is too high, should be moved to separate f
 
 - Adding JSON logging with something like `pino`
 - Finish OpenAPI documentaion of endpoints
-- Create a way to generate Open API specification from Endpoint implementations. That way the source code could be the single source of truth
+- Creating a way to generate Open API specification from Endpoint implementations. That way the source code could be the single source of truth
