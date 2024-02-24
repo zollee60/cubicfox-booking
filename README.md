@@ -16,6 +16,7 @@ This project is an NX based standalone applicaiton repository.
   - `docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest`
 - Now, it is time to set the environment variables. The application validates the env values and throws an error during initialization if something is missing/not valid. You can find a `.env.example` file in the root, for more details.
 - Now that we can actually connect to the DB, we have to run migrations: `pnpm migrations:run`
+- Then we have to seed the DB. You can find an SQL script for this purpose: `src/db/seedData.sql`
 - Time to start the application: ` npx nx run cubicfox-booking:serve` (If you have NX CLI installed, then `pnpm start` is enough)
 
 (You can use the NX Console VSCode extension, if you don't want to use the terminal)
