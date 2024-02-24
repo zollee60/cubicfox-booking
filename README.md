@@ -41,3 +41,4 @@ is hard to read, cognitive complexity is too high, should be moved to separate f
 
 - Adding JSON logging with something like `pino`
 - Finish OpenAPI documentaion of endpoints
+- Create a way to generate Open API specification from Endpoint implementations. That way the source code could be the single source of truth
