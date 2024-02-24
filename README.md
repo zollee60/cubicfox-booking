@@ -28,3 +28,16 @@ This project is an NX based standalone applicaiton repository.
 - Drizzle: It is a newer ORM on the block, therefore not that mature like Sequelize or Type-ORM. I've decided to use Drizzle, because I really like it's SQL-like, typesafe API. Another reason I have against Sequelize is that it's static Models are making testing a bit hard. Unfortunately Drizzle's schema API is not uniform, so, it requires addtional effort to make it accessible for unit tests for example.
 
 - Zod: JSON schema validator, one of the bests in my opinion.
+
+## Potential improvement points:
+
+- Date related logic in
+
+```typescript
+createRoomService();
+```
+
+is hard to read, cognitive complexity is too high, should be moved to separate function
+
+- Adding JSON logging with something like `pino`
+- Finish OpenAPI documentaion of endpoints
