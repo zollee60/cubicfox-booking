@@ -2,6 +2,11 @@
 
 This project is an NX based standalone applicaiton repository.
 
+## Project structure
+
+- You can find the source of the app in the `src` folder
+- You can find some E2E tests in the `e2e` folder (wip)
+
 ## How to start the application(s)?
 
 - First, we have to install the dependencies. This project uses PNPM: `pnpm install`
